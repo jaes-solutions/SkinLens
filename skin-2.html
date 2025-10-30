@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skin Analysis – Step 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="bg-gray-50 font-[Poppins] flex flex-col items-center justify-center min-h-screen p-4"
+  >
+    <header
+      class="navbar fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-white/40 border-b border-white/20 shadow-sm transition-all duration-300"
+    >
+      <div
+        class="max-w-7xl mx-auto flex justify-between items-center py-3 px-4 md:px-8"
+      >
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3">
+          <!--<img src="logo.jpg" alt="Logo" class="h-10 w-auto rounded-full shadow-sm" />-->
+          <span class="text-2xl font-semibold text-sky-900 tracking-wide"
+            >Skin Lens.</span
+          >
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav
+          class="hidden md:flex items-center gap-8 text-[16px] font-medium tracking-wide"
+        >
+          <a
+            href="index.html#HowitWorks"
+            class="nav-link hover:text-black transition-colors duration-300"
+            >How it Works</a
+          >
+          <a
+            href="index.html#Features"
+            class="nav-link hover:text-black transition-colors duration-300"
+            >Features</a
+          >
+          <a
+            href="index.html#ForBrandsClinics"
+            class="nav-link hover:text-black transition-colors duration-300"
+            >For Brands & Clinics</a
+          >
+          <a
+            href="index.html#ContactUs"
+            class="nav-link hover:text-black transition-colors duration-300"
+            >Contact Us</a
+          >
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden focus:outline-none text-sky-900"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <nav
+        id="mobile-menu"
+        class="hidden md:hidden flex flex-col bg-white/90 backdrop-blur-sm border-t border-slate-200 shadow-lg"
+      >
+        <a
+          href="index.html#HowitWorks"
+          class="mobile-link hover:text-white transition-colors duration-300 py-4 px-6 border-b border-slate-200"
+          >How it Works</a
+        >
+        <a
+          href="index.html#Features"
+          class="mobile-link hover:text-white transition-colors duration-300 py-4 px-6 border-b border-slate-200"
+          >Features</a
+        >
+        <a
+          href="index.html#ForBrandsClinics"
+          class="mobile-link hover:text-white transition-colors duration-300 py-4 px-6 border-b border-slate-200"
+          >For Brands & Clinics</a
+        >
+        <a
+          href="index.html#ContactUs"
+          class="mobile-link hover:text-white transition-colors duration-300 py-4 px-6"
+          >Contact Us</a
+        >
+      </nav>
+    </header>
+
+    <!-- Progress Bar -->
+    <div class="w-full mt-10 max-w-2xl mb-8">
+      <div class="flex justify-between text-sm text-gray-500 mb-2">
+        <span>Step 2 of 5</span>
+        <span>25% Complete</span>
+      </div>
+      <div class="w-full bg-gray-200 rounded-full h-2">
+        <div class="bg-sky-500 h-2 rounded-full" style="width: 25%"></div>
+      </div>
+    </div>
+
+    <!-- Question Card -->
+    <div class="bg-white rounded-3xl shadow-xl p-8 max-w-2xl w-full">
+      <h2 class="text-2xl font-extrabold text-gray-800 text-center mb-8">
+        How would you describe your skin?
+      </h2>
+
+      <form class="space-y-4">
+        <label
+          class="flex items-center border border-gray-200 rounded-xl p-4 hover:border-sky-500 cursor-pointer transition"
+        >
+          <input
+            type="radio"
+            name="skin-type"
+            class="w-5 h-5 text-sky-600"
+            required
+          />
+          <span class="ml-3 text-gray-700">Oily – Shiny, large pores</span>
+        </label>
+
+        <label
+          class="flex items-center border border-gray-200 rounded-xl p-4 hover:border-sky-500 cursor-pointer transition"
+        >
+          <input
+            type="radio"
+            name="skin-type"
+            class="w-5 h-5 text-sky-600"
+            required
+          />
+          <span class="ml-3 text-gray-700">Dry – Tight, flaky</span>
+        </label>
+
+        <label
+          class="flex items-center border border-gray-200 rounded-xl p-4 hover:border-sky-500 cursor-pointer transition"
+        >
+          <input
+            type="radio"
+            name="skin-type"
+            class="w-5 h-5 text-sky-600"
+            required
+          />
+          <span class="ml-3 text-gray-700"
+            >Combination – Oily T-zone, dry cheeks</span
+          >
+        </label>
+
+        <label
+          class="flex items-center border border-gray-200 rounded-xl p-4 hover:border-sky-500 cursor-pointer transition"
+        >
+          <input
+            type="radio"
+            name="skin-type"
+            class="w-5 h-5 text-sky-600"
+            required
+          />
+          <span class="ml-3 text-gray-700">Sensitive – Easily irritated</span>
+        </label>
+
+        <label
+          class="flex items-center border border-gray-200 rounded-xl p-4 hover:border-sky-500 cursor-pointer transition"
+        >
+          <input
+            type="radio"
+            name="skin-type"
+            class="w-5 h-5 text-sky-600"
+            required
+          />
+          <span class="ml-3 text-gray-700">Normal – Balanced</span>
+        </label>
+
+        <!-- Navigation Buttons -->
+        <div class="flex justify-between pt-8">
+          <a
+            href="skin-1.html"
+            class="px-6 py-2 border border-gray-400 text-gray-700 rounded-full hover:bg-gray-100 transition"
+          >
+            ← Previous
+          </a>
+          <button
+            type="submit"
+            class="px-6 py-2 bg-sky-500 text-white rounded-full hover:bg-sky-600 transition"
+          >
+            Next →
+          </button>
+        </div>
+      </form>
+
+      <script>
+        document
+          .querySelector("form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            const selected = document.querySelector(
+              'input[name="skin-type"]:checked'
+            );
+            if (selected) {
+              localStorage.setItem(
+                "skinType",
+                selected.nextElementSibling.textContent
+              );
+              window.location.href = "skin-3.html";
+            } else {
+              alert("Please select your skin type before continuing.");
+            }
+          });
+
+        // Restore selected skin type from localStorage
+        window.addEventListener("DOMContentLoaded", () => {
+          const savedSkinType = localStorage.getItem("skinType");
+          if (savedSkinType) {
+            const radios = document.querySelectorAll('input[name="skin-type"]');
+            radios.forEach((radio) => {
+              if (
+                radio.nextElementSibling.textContent.trim() ===
+                savedSkinType.trim()
+              ) {
+                radio.checked = true;
+              }
+            });
+          }
+        });
+
+        // Auto-update localStorage when a new option is selected
+        document
+          .querySelectorAll('input[name="skin-type"]')
+          .forEach((radio) => {
+            radio.addEventListener("change", () => {
+              localStorage.setItem(
+                "skinType",
+                radio.nextElementSibling.textContent
+              );
+            });
+          });
+        // Mobile menu toggle
+        const btn = document.getElementById("mobile-menu-btn");
+        const menu = document.getElementById("mobile-menu");
+        btn.addEventListener("click", () => {
+          menu.classList.toggle("hidden");
+        });
+      </script>
+    </div>
+  </body>
+</html>

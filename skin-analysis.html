@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Skin Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      #healthBar {
+        transition: width 10s ease-in-out;
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-white font-[Poppins] min-h-screen flex flex-col items-center justify-center p-6"
+  >
+    <header
+      class="navbar fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-white/40 border-b border-white/20 shadow-sm transition-all duration-300"
+    >
+      <div
+        class="max-w-7xl mx-auto flex justify-between items-center py-3 px-4 md:px-8"
+      >
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3">
+          <!--<img src="logo.jpg" alt="Logo" class="h-10 w-auto rounded-full shadow-sm" />-->
+          <span class="text-2xl font-semibold text-sky-900 tracking-wide"
+            >Skin Lens.</span
+          >
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav
+          class="hidden md:flex items-center gap-8 text-[16px] font-medium tracking-wide"
+        >
+          <a
+            href="index.html#HowitWorks"
+            class="nav-link hover:text-black transition-colors duration-300"
+            >How it Works</a
+          >
+          <a
+            href="index.html#Features"
+            class="nav-link hover:text-black transition-colors duration-300"
+            >Features</a
+          >
+          <a
+            href="index.html#ForBrandsClinics"
+            class="nav-link hover:text-black transition-colors duration-300"
+            >For Brands & Clinics</a
+          >
+          <a
+            href="index.html#ContactUs"
+            class="nav-link hover:text-black transition-colors duration-300"
+            >Contact Us</a
+          >
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden focus:outline-none text-sky-900"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <nav
+        id="mobile-menu"
+        class="hidden md:hidden flex flex-col bg-white/90 backdrop-blur-sm border-t border-slate-200 shadow-lg"
+      >
+        <a
+          href="index.html#HowitWorks"
+          class="mobile-link hover:text-white transition-colors duration-300 py-4 px-6 border-b border-slate-200"
+          >How it Works</a
+        >
+        <a
+          href="index.html#Features"
+          class="mobile-link hover:text-white transition-colors duration-300 py-4 px-6 border-b border-slate-200"
+          >Features</a
+        >
+        <a
+          href="index.html#ForBrandsClinics"
+          class="mobile-link hover:text-white transition-colors duration-300 py-4 px-6 border-b border-slate-200"
+          >For Brands & Clinics</a
+        >
+        <a
+          href="index.html#ContactUs"
+          class="mobile-link hover:text-white transition-colors duration-300 py-4 px-6"
+          >Contact Us</a
+        >
+      </nav>
+    </header>
+
+    <div
+      class="flex flex-col md:flex-row justify-center items-start gap-8 mt-12 w-full max-w-6xl"
+    >
+      <!-- Skin Health Score -->
+      <div
+        class="bg-white rounded-3xl shadow-lg p-10 w-full md:w-1/3 text-center flex flex-col justify-center items-center h-[480px]"
+      >
+        <h2 class="text-2xl font-semibold text-sky-800 mb-4">
+          Skin Health Score
+        </h2>
+        <div class="flex justify-center mt-6">
+          <div class="relative w-40 h-40">
+            <svg class="w-full h-full transform -rotate-90">
+              <circle
+                cx="80"
+                cy="80"
+                r="70"
+                stroke="#E5E7EB"
+                stroke-width="12"
+                fill="none"
+              />
+              <circle
+                id="circleProgress"
+                cx="80"
+                cy="80"
+                r="70"
+                stroke="#0EA5E9"
+                stroke-width="12"
+                fill="none"
+                stroke-dasharray="439.82"
+                stroke-dashoffset="439.82"
+                stroke-linecap="round"
+                class="transition-all duration-1000 ease-in-out"
+              />
+            </svg>
+            <div
+              id="circleText"
+              class="absolute inset-0 flex items-center justify-center text-2xl font-bold text-sky-700"
+            >
+              0%
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skin Health Report -->
+      <div
+        id="results"
+        class="bg-white rounded-3xl shadow-lg p-8 w-full md:w-1/2 text-center"
+      ></div>
+    </div>
+
+    <div class="mt-10 flex justify-center">
+      <button
+        id="goHomeBtn"
+        class="px-8 py-3 bg-sky-600 text-white rounded-full text-lg font-semibold hover:bg-sky-700 transition"
+      >
+        Go Home
+      </button>
+    </div>
+
+    <script>
+      //skin percentage calculation can be added here
+      window.addEventListener("DOMContentLoaded", () => {
+        const age = localStorage.getItem("age");
+        const skinType = localStorage.getItem("skinType");
+        const lifestyle = localStorage.getItem("lifestyle");
+        const sleep = localStorage.getItem("sleep");
+        const goals = localStorage.getItem("goals");
+
+        let score = 0;
+
+        // Age
+        const ageScores = {
+          "18–24 years": 20,
+          "25–34 years": 18,
+          "35–44 years": 15,
+          "45–54 years": 12,
+          "55+ years": 10,
+        };
+        score += ageScores[age] || 0;
+
+        // Skin Type
+        const skinScores = {
+          "Normal – Balanced": 20,
+          "Combination – Oily T-zone, dry cheeks": 18,
+          "Oily – Shiny, large pores": 15,
+          "Dry – Tight, flaky": 14,
+          "Sensitive – Easily irritated": 12,
+        };
+        score += skinScores[skinType] || 0;
+
+        // Lifestyle
+        const lifestyleScores = {
+          Healthy: 20,
+          Moderate: 15,
+          Unhealthy: 10,
+        };
+        score += lifestyleScores[lifestyle] || 0;
+
+        // Sleep
+        const sleepScores = {
+          "7–8 hours": 30,
+          "5–6 hours": 15,
+          "Less than 5 hours": 10,
+        };
+        score += sleepScores[sleep] || 0;
+
+        // Goals (if multiple selected, split by comma)
+        let goalScore = 0;
+        if (goals) {
+          if (goals.includes("Clear")) goalScore += 10;
+          if (goals.includes("signs")) goalScore += 5;
+          if (goals.includes("Better")) goalScore += 5;
+          if (goals.includes("Even")) goalScore += 3;
+        }
+        score += goalScore;
+
+        // Max possible = 100
+        const percentage = Math.min(Math.round((score / 100) * 100), 100);
+        // Update circular progress bar visually
+        const circle = document.getElementById("circleProgress");
+        const circleText = document.getElementById("circleText");
+        if (circle && circleText) {
+          const radius = 70;
+          const circumference = 2 * Math.PI * radius;
+          const offset = circumference - (percentage / 100) * circumference;
+          circle.style.strokeDashoffset = offset;
+          circleText.textContent = `${percentage}%`;
+
+          // Dynamic color based on percentage
+          if (percentage >= 70)
+            circle.setAttribute("stroke", "#22C55E"); // green
+          else if (percentage >= 40)
+            circle.setAttribute("stroke", "#FACC15"); // yellow
+          else circle.setAttribute("stroke", "#EF4444"); // red
+        }
+        document.getElementById("results").innerHTML = `
+    <h2 class="text-2xl font-bold text-sky-700 mb-4">Your Skin Health Report</h2>
+    <p class="text-lg text-gray-800 mb-6">Estimated Skin Health: <strong class="text-sky-600">${percentage}%</strong></p>
+    <div class="grid gap-4 text-left">
+      <div class="p-4 rounded-xl bg-gradient-to-r from-sky-50 to-white shadow-sm">
+        <p class="text-gray-500 text-sm uppercase tracking-wide mb-1">Age</p>
+        <p class="text-lg font-semibold text-gray-800">${
+          age || "Not Provided"
+        }</p>
+      </div>
+      <div class="p-4 rounded-xl bg-gradient-to-r from-sky-50 to-white shadow-sm">
+        <p class="text-gray-500 text-sm uppercase tracking-wide mb-1">Skin Type</p>
+        <p class="text-lg font-semibold text-gray-800">${
+          skinType || "Not Provided"
+        }</p>
+      </div>
+      <div class="p-4 rounded-xl bg-gradient-to-r from-sky-50 to-white shadow-sm">
+        <p class="text-gray-500 text-sm uppercase tracking-wide mb-1">Lifestyle</p>
+        <p class="text-lg font-semibold text-gray-800">${
+          lifestyle || "Not Provided"
+        }</p>
+      </div>
+      <div class="p-4 rounded-xl bg-gradient-to-r from-sky-50 to-white shadow-sm">
+        <p class="text-gray-500 text-sm uppercase tracking-wide mb-1">Sleep</p>
+        <p class="text-lg font-semibold text-gray-800">${
+          sleep || "Not Provided"
+        }</p>
+      </div>
+      <div class="p-4 rounded-xl bg-gradient-to-r from-sky-50 to-white shadow-sm">
+        <p class="text-gray-500 text-sm uppercase tracking-wide mb-1">Goals</p>
+        <p class="text-lg font-semibold text-gray-800">${
+          goals || "Not Provided"
+        }</p>
+      </div>
+    </div>
+  `;
+      });
+
+      document.getElementById("goHomeBtn").addEventListener("click", () => {
+        localStorage.removeItem("age");
+        localStorage.removeItem("skinType");
+        localStorage.removeItem("lifestyle");
+        localStorage.removeItem("sleep");
+        localStorage.removeItem("goals");
+        window.location.href = "index.html";
+      });
+      // Mobile menu toggle
+      const btn = document.getElementById("mobile-menu-btn");
+      const menu = document.getElementById("mobile-menu");
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skin Analysis – Step 5</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body
+    class="bg-gray-50 font-[Poppins] flex flex-col items-center justify-center min-h-screen p-4"
+  >
+    <header
+      class="navbar fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-white/40 border-b border-white/20 shadow-sm transition-all duration-300"
+    >
+      <div
+        class="max-w-7xl mx-auto flex justify-between items-center py-3 px-4 md:px-8"
+      >
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3">
+          <!--<img src="logo.jpg" alt="Logo" class="h-10 w-auto rounded-full shadow-sm" />-->
+          <span class="text-2xl font-semibold text-sky-900 tracking-wide"
+            >Skin Lens.</span
+          >
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav
+          class="hidden md:flex items-center gap-8 text-[16px] font-medium tracking-wide"
+        >
+          <a
+            href="index.html#HowitWorks"
+            class="nav-link hover:text-black transition-colors duration-300"
+            >How it Works</a
+          >
+          <a
+            href="index.html#Features"
+            class="nav-link hover:text-black transition-colors duration-300"
+            >Features</a
+          >
+          <a
+            href="index.html#ForBrandsClinics"
+            class="nav-link hover:text-black transition-colors duration-300"
+            >For Brands & Clinics</a
+          >
+          <a
+            href="index.html#ContactUs"
+            class="nav-link hover:text-black transition-colors duration-300"
+            >Contact Us</a
+          >
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden focus:outline-none text-sky-900"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <nav
+        id="mobile-menu"
+        class="hidden md:hidden flex flex-col bg-white/90 backdrop-blur-sm border-t border-slate-200 shadow-lg"
+      >
+        <a
+          href="index.html#HowitWorks"
+          class="mobile-link hover:text-white transition-colors duration-300 py-4 px-6 border-b border-slate-200"
+          >How it Works</a
+        >
+        <a
+          href="index.html#Features"
+          class="mobile-link hover:text-white transition-colors duration-300 py-4 px-6 border-b border-slate-200"
+          >Features</a
+        >
+        <a
+          href="index.html#ForBrandsClinics"
+          class="mobile-link hover:text-white transition-colors duration-300 py-4 px-6 border-b border-slate-200"
+          >For Brands & Clinics</a
+        >
+        <a
+          href="index.html#ContactUs"
+          class="mobile-link hover:text-white transition-colors duration-300 py-4 px-6"
+          >Contact Us</a
+        >
+      </nav>
+    </header>
+    <!-- Progress Bar -->
+    <div class="w-full mt-10 max-w-2xl mb-8">
+      <div class="flex justify-between text-sm text-gray-500 mb-2">
+        <span>Step 5 of 5</span>
+        <span>100% Complete</span>
+      </div>
+      <div class="w-full bg-gray-200 rounded-full h-2">
+        <div class="bg-sky-500 h-2 rounded-full" style="width: 100%"></div>
+      </div>
+    </div>
+
+    <!-- Question Card -->
+    <div class="bg-white rounded-3xl shadow-xl p-8 max-w-2xl w-full">
+      <h2 class="text-2xl font-extrabold text-gray-800 text-center mb-8">
+        What are your skincare goals?
+      </h2>
+
+      <form class="space-y-4">
+        <label
+          class="flex items-center border border-gray-200 rounded-xl p-4 hover:border-sky-500 cursor-pointer transition"
+        >
+          <input type="checkbox" name="goal" class="w-5 h-5 text-sky-600" />
+          <span class="ml-3 text-gray-700">Clear, acne-free skin</span>
+        </label>
+
+        <label
+          class="flex items-center border border-gray-200 rounded-xl p-4 hover:border-sky-500 cursor-pointer transition"
+        >
+          <input type="checkbox" name="goal" class="w-5 h-5 text-sky-600" />
+          <span class="ml-3 text-gray-700">Prevent signs of aging</span>
+        </label>
+
+        <label
+          class="flex items-center border border-gray-200 rounded-xl p-4 hover:border-sky-500 cursor-pointer transition"
+        >
+          <input type="checkbox" name="goal" class="w-5 h-5 text-sky-600" />
+          <span class="ml-3 text-gray-700">Even skin tone</span>
+        </label>
+
+        <label
+          class="flex items-center border border-gray-200 rounded-xl p-4 hover:border-sky-500 cursor-pointer transition"
+        >
+          <input type="checkbox" name="goal" class="w-5 h-5 text-sky-600" />
+          <span class="ml-3 text-gray-700">Better hydration</span>
+        </label>
+
+        <label
+          class="flex items-center border border-gray-200 rounded-xl p-4 hover:border-sky-500 cursor-pointer transition"
+        >
+          <input type="checkbox" name="goal" class="w-5 h-5 text-sky-600" />
+          <span class="ml-3 text-gray-700">Sun protection</span>
+        </label>
+
+        <label
+          class="flex items-center border border-gray-200 rounded-xl p-4 hover:border-sky-500 cursor-pointer transition"
+        >
+          <input type="checkbox" name="goal" class="w-5 h-5 text-sky-600" />
+          <span class="ml-3 text-gray-700">Simple, quick routine</span>
+        </label>
+
+        <label
+          class="flex items-center border border-gray-200 rounded-xl p-4 hover:border-sky-500 cursor-pointer transition"
+        >
+          <input type="checkbox" name="goal" class="w-5 h-5 text-sky-600" />
+          <span class="ml-3 text-gray-700">Professional appearance</span>
+        </label>
+
+        <!-- Navigation Buttons -->
+        <div class="flex justify-between pt-8">
+          <a
+            href="skin-4.html"
+            class="px-6 py-2 border border-gray-400 text-gray-700 rounded-full hover:bg-gray-100 transition"
+          >
+            ← Previous
+          </a>
+
+          <!-- Submit Button -->
+          <button
+            type="submit"
+            class="px-6 py-2 bg-sky-500 text-white rounded-full hover:bg-sky-600 transition"
+          >
+            Complete →
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      document
+        .querySelector("form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const selected = document.querySelectorAll(
+            'input[name="goal"]:checked'
+          );
+          if (selected.length > 0) {
+            const goals = Array.from(selected).map(
+              (input) => input.nextElementSibling.textContent
+            );
+            localStorage.setItem("goals", goals.join(", "));
+            window.location.href = "skin-results.html";
+          } else {
+            alert(
+              "Please select at least one skincare goal before continuing."
+            );
+          }
+        });
+    </script>
+    <script>
+      // Restore previously selected skincare goals
+      window.addEventListener("DOMContentLoaded", () => {
+        const savedGoals = localStorage.getItem("goals");
+        if (savedGoals) {
+          const selectedGoals = savedGoals
+            .split(",")
+            .map((goal) => goal.trim());
+          const checkboxes = document.querySelectorAll('input[name="goal"]');
+          checkboxes.forEach((checkbox) => {
+            const label = checkbox.nextElementSibling.textContent.trim();
+            if (selectedGoals.includes(label)) {
+              checkbox.checked = true;
+            }
+          });
+        }
+      });
+
+      // Auto-update localStorage when checkboxes are changed
+      document.querySelectorAll('input[name="goal"]').forEach((checkbox) => {
+        checkbox.addEventListener("change", () => {
+          const selected = Array.from(
+            document.querySelectorAll('input[name="goal"]:checked')
+          ).map((input) => input.nextElementSibling.textContent);
+          localStorage.setItem("goals", selected.join(", "));
+        });
+      });
+      // Mobile menu toggle
+      const btn = document.getElementById("mobile-menu-btn");
+      const menu = document.getElementById("mobile-menu");
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

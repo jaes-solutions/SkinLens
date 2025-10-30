@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skin Lens</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body id="home-page" class="font-[Poppins] bg-gray-50 text-gray-800 overflow-x-hidden">
+    
+    <!-- Navigation -->
+    <header class="navbar fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-white/40 border-b border-white/20 shadow-sm transition-all duration-300">
+      <div class="max-w-7xl mx-auto flex justify-between items-center py-3 px-4 md:px-8">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3">
+          <!--<img src="logo.jpg" alt="Logo" class="h-10 w-auto rounded-full shadow-sm" />-->
+          <span class="text-2xl font-semibold text-sky-900 tracking-wide">Skin Lens.</span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-8 text-[16px] font-medium tracking-wide">
+          <a href="index.html#HowitWorks" class="nav-link hover:text-white transition-colors duration-300">How it Works</a>
+          <a href="index.html#Features" class="nav-link hover:text-white transition-colors duration-300">Features</a>
+          <a href="index.html#ForBrandsClinics" class="nav-link hover:text-white transition-colors duration-300">For Brands & Clinics</a>
+          <a href="index.html#ContactUs" class="nav-link hover:text-white transition-colors duration-300">Contact Us</a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden focus:outline-none text-sky-900">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <nav id="mobile-menu" class="hidden md:hidden flex flex-col bg-white/90 backdrop-blur-sm border-t border-slate-200 shadow-lg">
+        <a href="index.html#HowitWorks" class="mobile-link hover:text-white transition-colors duration-300 py-4 px-6 border-b border-slate-200">How it Works</a>
+        <a href="index.html#Features" class="mobile-link hover:text-white transition-colors duration-300 py-4 px-6 border-b border-slate-200">Features</a>
+        <a href="index.html#ForBrandsClinics" class="mobile-link hover:text-white transition-colors duration-300 py-4 px-6 border-b border-slate-200">For Brands & Clinics</a>
+        <a href="index.html#ContactUs" class="mobile-link hover:text-white transition-colors duration-300 py-4 px-6">Contact Us</a>
+      </nav>
+    </header>
+
+<!-- Hero Section -->
+<section
+  class="w-full h-screen relative flex items-center justify-center overflow-hidden bg-center bg-cover"
+  style="background-image: url('assests/bg-image.png');"
+>
+  <div class="absolute top-0 left-0 w-full h-full bg-black/40 -z-10"></div>
+
+  <div class="relative z-10 text-center text-white mt-12 px-6 max-w-3xl">
+    <h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
+      Skincare that adapts to you: climate, lifestyle, and time.
+    </h1>
+
+    <p class="text-lg md:text-xl font-light leading-relaxed mb-8 text-gray-100 drop-shadow-md">
+      Scan your skin with a phone, get real-time AI analysis, try products in AR, and receive a regimen that evolves with weather, stress, and habits. Brand neutral. Privacy first.
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6">
+  <a
+    href="#ContactUs"
+    class="px-8 py-3 bg-sky-700 text-white rounded-lg text-lg font-semibold shadow-lg transition-all duration-300 hover:bg-white hover:text-sky-700 border border-transparent hover:border-sky-700"
+  >
+    Join Our Waitlist
+  </a>
+
+  <a
+    href="#ForBrandsClinics"
+    class="px-8 py-3 bg-white text-sky-700 rounded-lg text-lg font-semibold shadow-lg transition-all duration-300 hover:bg-sky-700 hover:text-white border border-transparent hover:border-sky-700"
+  >
+    For Brands & Clinics
+  </a>
+</div>
+</div>
+</section>
+
+<!-- How It Works Section -->
+<section id="HowitWorks" class="relative z-20 w-full bg-[#224E74] py-16">
+  <div class="max-w-6xl mx-auto px-4">
+    <!-- Section Headline + Tagline -->
+    <h2 class="text-4xl md:text-5xl font-extrabold text-white text-center mb-3">
+      How It Works
+    </h2>
+    <h3 class="text-lg md:text-xl text-sky-100 text-center font-semibold mb-10">
+      Discover Your Perfect Skincare Routine in Just 4 Easy Steps
+    </h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+      <!-- Step 1 -->
+      <div class="relative rounded-2xl bg-white/90 py-8 px-4 max-w-[270px] min-h-[265px] mx-auto flex flex-col items-center text-center shadow-md border border-transparent hover:shadow-2xl hover:border-sky-400 hover:-translate-y-2 hover:scale-105 transition-all duration-300 group">
+        <div class="absolute left-1/2 -translate-x-1/2 -top-6 w-10 h-10 flex items-center justify-center rounded-full bg-sky-700 text-white text-lg font-extrabold shadow select-none">1</div>
+        <!-- Modern survey icon -->
+        <svg class="h-16 w-16 mb-4 text-sky-500 group-hover:text-sky-800 transition duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 48 48">
+          <rect x="8" y="12" width="32" height="24" rx="4" fill="#E0F2FE"/>
+          <path d="M16 24h8M16 30h16" stroke="#0369a1" stroke-linecap="round"/>
+          <circle cx="13" cy="24" r="1.5" fill="#0369a1"/>
+          <circle cx="13" cy="30" r="1.5" fill="#0369a1"/>
+          <rect x="8" y="12" width="32" height="24" rx="4" stroke="#0369a1"/>
+        </svg>
+        <h4 class="text-lg font-bold text-sky-800 mb-1">Smart Quiz</h4>
+        <p class="text-sm text-gray-700">Share your skin and goals in seconds—our intelligent form adapts as you answer.</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="relative rounded-2xl bg-white py-8 px-4 max-w-[270px] min-h-[265px] mx-auto flex flex-col items-center text-center shadow-md border border-transparent hover:shadow-2xl hover:border-sky-400 hover:-translate-y-2 hover:scale-105 transition-all duration-300 group">
+        <div class="absolute left-1/2 -translate-x-1/2 -top-6 w-10 h-10 flex items-center justify-center rounded-full bg-sky-700 text-white text-lg font-extrabold shadow">2</div>
+        <!-- Camera icon -->
+        <svg class="h-16 w-16 mb-4 text-sky-500 group-hover:text-sky-800 transition duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 48 48">
+          <rect x="10" y="16" width="28" height="18" rx="4" fill="#E0F2FE"/>
+          <path d="M16 20l2-4h12l2 4" stroke="#0369a1"/>
+          <circle cx="24" cy="25" r="5" stroke="#0369a1" stroke-width="2"/>
+          <rect x="10" y="16" width="28" height="18" rx="4" stroke="#0369a1"/>
+        </svg>
+        <h4 class="text-lg font-bold text-sky-800 mb-1">Snap & Upload</h4>
+        <p class="text-sm text-gray-700">Take a photo or upload one—no makeup, just real skin for true results.</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="relative rounded-2xl bg-white/90 py-8 px-4 max-w-[270px] min-h-[265px] mx-auto flex flex-col items-center text-center shadow-md border border-transparent hover:shadow-2xl hover:border-sky-400 hover:-translate-y-2 hover:scale-105 transition-all duration-300 group">
+        <div class="absolute left-1/2 -translate-x-1/2 -top-6 w-10 h-10 flex items-center justify-center rounded-full bg-sky-700 text-white text-lg font-extrabold shadow">3</div>
+        <!-- AI scan icon -->
+        <svg class="h-16 w-16 mb-4 text-sky-500 group-hover:text-sky-800 transition duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 48 48">
+          <circle cx="24" cy="24" r="13" fill="#E0F2FE"/>
+          <path d="M24 15v9l7 5" stroke="#0369a1"/>
+          <circle cx="24" cy="24" r="13" stroke="#0369a1"/>
+        </svg>
+        <h4 class="text-lg font-bold text-sky-800 mb-1">AI Skin Scan</h4>
+        <p class="text-sm text-gray-700">Our neural engine reviews your image for hydration, tone, and stress in under 10 seconds.</p>
+      </div>
+
+            <!-- Step 4 -->
+      <div class="relative rounded-2xl bg-white py-8 px-4 max-w-[270px] min-h-[265px] mx-auto flex flex-col items-center text-center shadow-md border border-transparent hover:shadow-2xl hover:border-sky-400 hover:-translate-y-2 hover:scale-105 transition-all duration-300 group">
+        <div class="absolute left-1/2 -translate-x-1/2 -top-6 w-10 h-10 flex items-center justify-center rounded-full bg-sky-700 text-white text-lg font-extrabold shadow">4</div>
+        <!-- Routine/checklist icon -->
+        <svg class="h-16 w-16 mb-4 text-sky-500 group-hover:text-sky-800 transition duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 48 48">
+          <rect x="12" y="12" width="24" height="24" rx="6" fill="#E0F2FE"/>
+          <path d="M18 23h12M18 29h8" stroke="#0369a1" stroke-linecap="round"/>
+          <path d="M17 17l2 2 4-4" stroke="#22d3ee" stroke-linecap="round" stroke-width="2"/>
+          <rect x="12" y="12" width="24" height="24" rx="6" stroke="#0369a1"/>
+        </svg>
+        <h4 class="text-lg font-bold text-sky-800 mb-1">Personal Plan</h4>
+        <p class="text-sm text-gray-700">Get your adaptive regimen: ingredients, routines, and tips built for you and your lifestyle.</p>
+      </div>
+
+     </div>
+
+<div class="flex justify-center mt-12">
+  <a
+    href="skin-1.html"
+    class="px-10 py-4 bg-sky-600 text-white text-2xl font-extrabold rounded-full shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300"
+  >
+    Start Your Skin Analysis
+  </a>
+</div>
+   
+ 
+</section>
+
+
+
+<!-- Features Section -->
+<section id="Features" class="features-section py-20 bg-sky">
+  <div class="container mx-auto px-6 md:px-12 lg:px-20 flex flex-col lg:flex-row items-center gap-12">
+
+    <!-- Left Image/Video Column -->
+    <div class="features-media flex-1 flex justify-center">
+      <!-- Replace with your chosen image or a muted video showing skin, nature, or subtle skincare tech -->
+      <img src="assests/Features.png" alt="How it Works - Skin Lens" class="w-18 h-26 object-cover rounded-2xl border-4 border-sky-700 shadow-md transition-transform hover:scale-[1.02] hover:shadow-2xl duration-300">
+      <!-- Or use a soft looped video:
+      <video autoplay muted loop class="w-full h-auto rounded-2xl">
+        <source src="path/to/your-feature-video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      -->
+    </div>
+
+    <!-- Right Features Cards -->
+    <div class="features-cards flex-1 flex flex-col gap-8">
+      
+      <!-- AI Skin Diagnostics -->
+      <div class="feature-card bg-sky-100 border border-sky-200 rounded-2xl p-6 flex gap-4 items-start shadow hover:shadow-2xl hover:scale-[1.03] hover:border-sky-400 transition-all duration-300 group">
+        <div class="icon text-sky-600 flex-shrink-0 mt-1">
+          <!-- Tree/Diagnostic symbol -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2L3.5 20h17L12 2z"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-sky-900 mb-1 group-hover:underline">AI Skin Diagnostics</h3>
+          <p class="text-gray-700">Multi-ethnic CNN models score hydration, texture, pigmentation, wrinkles, and acne.</p>
+        </div>
+      </div>
+      
+      <!-- Climate Responsive -->
+      <div class="feature-card bg-sky-100 border border-sky-200 rounded-2xl p-6 flex gap-4 items-start shadow hover:shadow-2xl hover:scale-[1.03] hover:border-sky-400 transition-all duration-300 group">
+        <div class="icon text-sky-600 flex-shrink-0 mt-1">
+          <!-- Sun/Cloud symbol for climate -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+            <circle cx="12" cy="12" r="5"/>
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-sky-900 mb-1 group-hover:underline">Climate Responsive</h3>
+          <p class="text-gray-700">UV, humidity, and pollution auto-adjust your AM/PM routine daily.</p>
+        </div>
+      </div>
+      
+      <!-- Ingredient Transparency -->
+      <div class="feature-card bg-sky-100 border border-sky-200 rounded-2xl p-6 flex gap-4 items-start shadow hover:shadow-2xl hover:scale-[1.03] hover:border-sky-400 transition-all duration-300 group">
+        <div class="icon text-sky-600 flex-shrink-0 mt-1">
+          <!-- Shield/checkmark symbol for transparency -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2l7 4v6c0 5.5-3.8 10.7-7 12-3.2-1.3-7-6.5-7-12V6l7-4zm-1 11l-2-2 1.41-1.41L11 10.17l3.59-3.58L16 8l-5 5z"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-sky-900 mb-1 group-hover:underline">Ingredient Transparency</h3>
+          <p class="text-gray-700">Bio-compatibility checks and provenance for vegan, allergen-safe picks.</p>
+        </div>
+      </div>
+      
+      <!-- AR Try On -->
+      <div class="feature-card bg-sky-100 border border-sky-200 rounded-2xl p-6 flex gap-4 items-start shadow hover:shadow-2xl hover:scale-[1.03] hover:border-sky-400 transition-all duration-300 group">
+        <div class="icon text-sky-600 flex-shrink-0 mt-1">
+          <!-- Face/AR demo symbol -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+            <circle cx="12" cy="8.5" r="4"/>
+            <ellipse cx="12" cy="15" rx="7" ry="4"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-sky-900 mb-1 group-hover:underline">AR Try On</h3>
+          <p class="text-gray-700">Use augmented reality to try products virtually before buying.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- For Brands & Clinics Section -->
+<section id="ForBrandsClinics" class="bg-[#224E74] py-20">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <!-- Heading -->
+    <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">
+      For Brands and Clinics
+    </h1>
+    <h3 class="text-lg md:text-xl text-white font-medium mb-12">
+      Empowering skincare innovation for both professional clinics and trusted brands.
+    </h3>
+
+    <!-- Content Boxes -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
+      
+      <!-- For Brands -->
+      <div class="bg-white shadow-xl border border-sky-100 rounded-3xl p-8 text-left flex flex-col items-start transition-transform hover:scale-[1.02] hover:shadow-2xl duration-300">
+        <img src="assests/Brands.png" alt="For Brands" class="w-full h-72 object-contain rounded-2xl mb-6 bg-sky-50" />
+        <h2 class="text-2xl font-semibold text-sky-900 mb-4">For Brands</h2>
+        <ul class="list-disc pl-6 text-gray-700 space-y-3">
+          <li>Multi-brand API and product matching to reduce returns</li>
+          <li>AR try-on increases engagement and basket size</li>
+          <li>Ingredient transparency builds durable trust</li>
+          <li>Anonymized trend insights accelerate product cycles</li>
+        </ul>
+      </div>
+
+      <!-- For Clinics -->
+      <div class="bg-white shadow-xl border border-sky-100 rounded-3xl p-8 text-left flex flex-col items-start transition-transform hover:scale-[1.02] hover:shadow-2xl duration-300">
+        <img src="assests/Clinics.png" alt="For Clinics" class="w-full h-72 object-contain rounded-2xl mb-6 bg-sky-50" />
+        <h2 class="text-2xl font-semibold text-sky-900 mb-4">For Clinics</h2>
+        <ul class="list-disc pl-6 text-gray-700 space-y-3">
+          <li>On-device pre-screening reduces consult overhead</li>
+          <li>Tele-derm workflows and concise scan summaries</li>
+          <li>GDPR-first data control and audit trails</li>
+          <li>Optional nutraceutical guidance via skin–gut layer</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Contact Us Section -->
+<section id="ContactUs" class="bg-white py-20">
+  <div class="max-w-5xl mx-auto px-6 text-center">
+    <!-- Heading -->
+    <h2 class="text-4xl md:text-5xl font-extrabold text-sky-900 mb-4">
+      Contact Us
+    </h2>
+    <p class="text-lg text-gray-900 mb-10">
+      Have a question or want to collaborate? We'd love to hear from you!
+    </p>
+
+    <!-- Contact Form -->
+    <form class="bg-sky-50 rounded-3xl shadow-lg p-8 md:p-10 max-w-3xl mx-auto space-y-6 border border-sky-100">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Name -->
+        <div class="flex flex-col text-left">
+          <label for="name" class="text-sky-800 font-medium mb-2">Name</label>
+          <input 
+            type="text" 
+            id="name" 
+            placeholder="Your full name" 
+            class="w-full px-4 py-3 rounded-lg border border-sky-200 focus:ring-2 focus:ring-sky-500 focus:outline-none text-gray-800"
+            required
+          />
+        </div>
+
+        <!-- Email -->
+        <div class="flex flex-col text-left">
+          <label for="email" class="text-sky-800 font-medium mb-2">Email</label>
+          <input 
+            type="email" 
+            id="email" 
+            placeholder="you@example.com" 
+            class="w-full px-4 py-3 rounded-lg border border-sky-200 focus:ring-2 focus:ring-sky-500 focus:outline-none text-gray-800"
+            required
+          />
+        </div>
+      </div>
+
+      <!-- Contact Number -->
+      <div class="flex flex-col text-left">
+        <label for="phone" class="text-sky-800 font-medium mb-2">Contact Number</label>
+        <input 
+          type="tel" 
+          id="phone" 
+          placeholder="+91 98765 43210" 
+          class="w-full px-4 py-3 rounded-lg border border-sky-200 focus:ring-2 focus:ring-sky-500 focus:outline-none text-gray-800"
+          required
+        />
+      </div>
+
+      <!-- Message -->
+      <div class="flex flex-col text-left">
+        <label for="message" class="text-sky-800 font-medium mb-2">Message</label>
+        <textarea 
+          id="message" 
+          rows="6" 
+          placeholder="Write your message here..."
+          class="w-full px-4 py-3 rounded-lg border border-sky-200 focus:ring-2 focus:ring-sky-500 focus:outline-none text-gray-800 resize-none"
+          required
+        ></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="text-center pt-4">
+        <button 
+          type="submit"
+          class="bg-sky-700 text-white px-10 py-3 rounded-full font-semibold text-lg shadow-md hover:bg-white hover:text-sky-700 border hover:border-sky-700 transition-all duration-300"
+        >
+          Send Message
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+
+<!-- Footer -->
+<footer class="bg-sky-700 text-white pt-12 pb-8">
+  <div class="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+
+    <!-- Brand and Description -->
+    <div class="space-y-4">
+      <a href="index.html" class="inline-flex items-center gap-3 mb-4">
+        <!--<img src="logo.jpg" alt="Skin Lens Logo" class="h-10 w-auto rounded-full shadow-sm" />-->
+        <span class="text-2xl font-semibold tracking-wide">Skin Lens.</span>
+      </a>
+      <p class="text-sky-100 max-w-sm leading-relaxed">
+        Personalized skincare powered by AI. Adapting your routine to your lifestyle and environment for radiant health.
+      </p>
+      <div class="flex space-x-4 mt-4">
+        <a href="#" aria-label="Facebook" class="hover:text-white transition-colors">
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-3h2v-2c0-2 1-3 3-3h2v3h-2a1 1 0 0 0-1 1v2h3l-1 3h-2v7A10 10 0 0 0 22 12Z"/></svg>
+        </a>
+        <a href="#" aria-label="Twitter" class="hover:text-white transition-colors">
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.6-2.46.7a4.26 4.26 0 0 0 1.9-2.35c-.82.48-1.72.82-2.7 1a4.22 4.22 0 0 0-7.2 3.85 12 12 0 0 1-8.7-4.4 4.22 4.22 0 0 0 1.3 5.7A4.18 4.18 0 0 1 3 9v.05a4.21 4.21 0 0 0 3.4 4.13 4.25 4.25 0 0 1-1.9.07 4.23 4.23 0 0 0 3.95 2.93A8.47 8.47 0 0 1 2 19.54a11.8 11.8 0 0 0 6.29 1.82c7.55 0 11.68-6.25 11.68-11.67 0-.18 0-.37-.01-.55A8.18 8.18 0 0 0 22.46 6Z"/></svg>
+        </a>
+        <a href="#" aria-label="Instagram" class="hover:text-white transition-colors">
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7Zm0 2h10c1.66 0 3 1.34 3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 1.34-3 3-3Zm5 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm3.75-3a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h5 class="text-white font-semibold mb-4">Quick Links</h5>
+      <ul class="space-y-3 text-sky-100">
+        <li><a href="How it Works.html" class="hover:text-white transition-colors">How it Works</a></li>
+        <li><a href="Features.html" class="hover:text-white transition-colors">Features</a></li>
+        <li><a href="For Brands & Clinics.html" class="hover:text-white transition-colors">For Brands & Clinics</a></li>
+        <li><a href="Contact Us.html" class="hover:text-white transition-colors">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources -->
+    <div>
+      <h5 class="text-white font-semibold mb-4">Resources</h5>
+      <ul class="space-y-3 text-sky-100">
+        <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+        <li><a href="#" class="hover:text-white transition-colors">Terms & Conditions</a></li>
+        <li><a href="#" class="hover:text-white transition-colors">Support</a></li>
+      </ul>
+    </div>
+
+    <!-- Newsletter Signup -->
+    <div>
+      <h5 class="text-white font-semibold mb-4">Join Our Newsletter</h5>
+      <p class="text-sky-100 mb-4 max-w-xs">
+        Get the latest skincare tips, exclusive offers, and product updates right in your inbox.
+      </p>
+     
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 md:px-8 mt-10 border-t border-sky-500 pt-6 text-center text-sky-200 text-sm">
+    &copy; 2025 Skin Lens. All rights reserved.
+  </div>
+</footer>
+
+
+
+
+
+
+    <script>
+      // Mobile menu toggle
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    </script>
+  </body>
+</html>
